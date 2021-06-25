@@ -5,15 +5,16 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-26 01:45:10
- * @LastEditTime: 2021-06-26 02:07:07
+ * @LastEditTime: 2021-06-26 02:19:47
  */
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
   title: 'react-awesome-chat',
-  favicon:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
-  logo: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+  base: 'https://github.com/draco-china/react-awesome-chat.git',
+  publicPath: 'https://github.com/draco-china/react-awesome-chat.git/',
+  favicon: '/code.svg',
+  logo: '/code.svg',
   outputPath: 'docs-dist',
   // more config: https://d.umijs.org/config
 });

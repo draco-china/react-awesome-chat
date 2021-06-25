@@ -5,12 +5,21 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-26 02:51:28
- * @LastEditTime: 2021-06-26 03:00:31
+ * @LastEditTime: 2021-06-26 04:03:50
  */
+
 export default {
-  esm: 'rollup',
-  cjs: 'rollup',
-  cssModules: true,
+  esm: 'babel',
+  cjs: 'babel',
+  umd: {
+    sourcemap: true,
+    minFile: true,
+    globals: {
+      react: 'React',
+    },
+  },
+  // cssModules: true,
   extractCSS: true,
   lessInBabelMode: true,
+  runtimeHelpers: true,
 };

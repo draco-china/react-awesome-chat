@@ -5,11 +5,11 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 23:03:52
- * @LastEditTime: 2021-06-26 01:30:24
+ * @LastEditTime: 2021-06-26 03:59:29
  */
 import React from 'react';
 import { Message } from '@/typings';
-const classNames = require('classnames');
+import classNames from 'classnames';
 
 import style from './index.less';
 

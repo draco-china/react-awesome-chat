@@ -13,7 +13,7 @@ import MsgItem from '../MsgItem';
 import ScrollBarWrapper from '../ScrollBarWrapper';
 import { Contact, ContactMessage } from '@/typings';
 
-const classNames = require('classnames');
+import classNames from 'classnames';
 
 type ChatRecordListProps = {
   data?: ContactMessage[];

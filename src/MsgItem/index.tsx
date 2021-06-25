@@ -11,7 +11,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import { Contact, ContactMessage } from '@/typings';
 import MsgBubble from '../MsgBubble';
-const classNames = require('classnames');
+import classNames from 'classnames';
 
 import globalStyle from '../common.less';
 import style from './index.less';

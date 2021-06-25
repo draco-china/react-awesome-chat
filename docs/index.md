@@ -5,13 +5,19 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:43:03
- * @LastEditTime: 2021-06-26 01:24:00
+ * @LastEditTime: 2021-06-26 02:38:57
 -->
 
 ## 介绍
 
 react-awesome-chat 是一个简单的 web 聊天组件。
 是基于 `react-jwchat` 优化的 `TypeScript` 版本
+
+### 安装
+
+```bash
+$ npm i react-awesome-chat
+```
 
 ```tsx
 import React, { useState } from 'react';

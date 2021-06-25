@@ -5,12 +5,10 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-26 01:46:35
- * @LastEditTime: 2021-06-26 01:46:35
+ * @LastEditTime: 2021-06-26 02:38:37
 -->
 
 # react-awesome-chat
-
-## Getting Started
 
 Install dependencies,
 

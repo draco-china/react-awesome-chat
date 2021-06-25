@@ -9,7 +9,7 @@
  */
 import React from 'react';
 import { Contact } from '@/typings';
-import style from './index.css';
+import style from './index.less';
 
 type ChatHeaderProps = {
   data: Contact;

@@ -8,7 +8,7 @@
  * @LastEditTime: 2021-06-26 00:30:41
  */
 import React, { Component } from 'react';
-import style from './index.css';
+import style from './index.less';
 import md5 from 'md5';
 import dayjs from 'dayjs';
 import ChatToolBar from '../ChatToolsBar';

@@ -9,7 +9,7 @@
  */
 import React, { Component } from 'react';
 
-import style from './index.css';
+import style from './index.less';
 
 type ChatToolBarProps = {
   tools?: React.ReactNode[];

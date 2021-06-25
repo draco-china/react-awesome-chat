@@ -12,7 +12,7 @@ import ContactItem from '../ContactItem';
 import ScrollBarWrapper from '../ScrollBarWrapper';
 import { Contact } from '@/typings';
 
-import style from './index.css';
+import style from './index.less';
 
 type ContactListProps = {
   data: Contact[];

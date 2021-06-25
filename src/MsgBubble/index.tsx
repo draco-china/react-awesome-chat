@@ -11,7 +11,7 @@ import React from 'react';
 import { Message } from '@/typings';
 const classNames = require('classnames');
 
-import style from './index.css';
+import style from './index.less';
 
 type MsgBubbleProps = {
   data: Message;

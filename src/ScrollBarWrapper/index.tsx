@@ -5,15 +5,16 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:57:55
- * @LastEditTime: 2021-06-26 01:33:05
+ * @LastEditTime: 2021-06-26 02:55:30
  */
 import React from 'react';
 import { ContactMessage, Contact } from '@/typings';
 
-import style from './index.css';
+import style from './index.less';
 
 type WrapperProps = {
   data?: ContactMessage[] | Contact[];
+  onSelect?: (contact: Contact) => void;
   bottom: boolean;
   height: number;
   style?: React.CSSProperties;

@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:53:12
- * @LastEditTime: 2021-06-26 00:55:21
+ * @LastEditTime: 2021-06-26 02:45:06
  */
 import { Contact, ContactMessage } from '@/typings';
 import React from 'react';
@@ -13,12 +13,12 @@ import ChatHeader from '../ChatHeader';
 import ChatInput from '../ChatInput';
 import ChatRecordList from '../ChatRecordList';
 
-import style from './index.css';
+import style from './index.less';
 
 const textHeight = 150;
 
 type ChatProps = {
-  onSend: (msgData: ContactMessage) => any;
+  onSend?: (msgData: ContactMessage) => any;
   me: Contact;
   contact: Contact;
   chatList?: ContactMessage[];
@@ -33,7 +33,7 @@ const Chat: React.FC<ChatProps> = (props) => {
   const chatRecordList = React.createRef<any>();
 
   const sendHandle = (msgData: ContactMessage) => {
-    props.onSend(msgData);
+    props.onSend?.(msgData);
     chatRecordList?.current?.computeHeight();
   };
 

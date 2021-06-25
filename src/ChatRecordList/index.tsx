@@ -8,7 +8,7 @@
  * @LastEditTime: 2021-06-26 01:31:54
  */
 import React from 'react';
-import style from './index.css';
+import style from './index.less';
 import MsgItem from '../MsgItem';
 import ScrollBarWrapper from '../ScrollBarWrapper';
 import { Contact, ContactMessage } from '@/typings';

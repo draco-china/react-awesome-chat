@@ -13,8 +13,8 @@ import { Contact, ContactMessage } from '@/typings';
 import MsgBubble from '../MsgBubble';
 const classNames = require('classnames');
 
-import globalStyle from '../common.css';
-import style from './index.css';
+import globalStyle from '../common.less';
+import style from './index.less';
 
 type MsgItemProps = {
   data: ContactMessage;

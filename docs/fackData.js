@@ -105,21 +105,21 @@ export const contactList = [
     message: '您已被该玩家禁言',
     date: '02-07',
   },
-]
+];
 
 export const contact = {
   id: 9527,
   avatar: '//game.gtimg.cn/images/lol/act/img/champion/Khazix.png',
   nickname: '卡兹克',
   desc: '看我点水就完了',
-}
+};
 
 export const my = {
   id: 1234,
   avatar: '//game.gtimg.cn/images/lol/act/a20201103lmpwjl/icon-ht.png',
   nickname: 'sirosong',
   desc: 'carry大神',
-}
+};
 
 export const messageList = [
   {
@@ -195,4 +195,4 @@ export const messageList = [
   //     content: '//game.gtimg.cn/images/lol/act/a20201103lmpwjl/icon-ht.png',
   //   },
   // },
-]
+];

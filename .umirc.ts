@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-26 01:45:10
- * @LastEditTime: 2021-06-26 01:45:10
+ * @LastEditTime: 2021-06-26 02:07:07
  */
 import { defineConfig } from 'dumi';
 

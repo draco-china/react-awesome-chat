@@ -1,0 +1,38 @@
+.shadow_top {
+  box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.shadow_bottom {
+  box-shadow: inset 0px -5px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.shadow_vertical {
+  box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.2),
+    inset 0px -5px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.list_area {
+  flex: 1;
+  overflow: auto;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  padding: 10px;
+}
+.list_area::-webkit-scrollbar {
+  width: 0 !important;
+}
+.load_more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 100px;
+  text-align: center;
+  color: #999;
+  background-color: #f1f1f1;
+  font-size: 12px;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+.load_more:hover {
+  cursor: pointer;
+}

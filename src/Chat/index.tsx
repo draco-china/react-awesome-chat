@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:53:12
- * @LastEditTime: 2021-06-29 00:06:44
+ * @LastEditTime: 2021-06-29 04:21:33
  */
 import { Contact, ContactMessage } from '../typings';
 import React from 'react';
@@ -41,6 +41,7 @@ const Chat: React.FC<ChatProps> = (props) => {
         data={props.chatList}
         className="chat-content-list"
         bottom
+        borderd
       />
       <ChatInput {...props} onSend={sendHandle} />
     </div>

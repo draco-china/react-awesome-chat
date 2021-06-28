@@ -67,7 +67,7 @@ const App = () => {
           me={my}
           chatList={msgList}
           onSend={(msg) => setMsgList([...msgList, msg])}
-          onEarlier={() => console.log('EarlierEarlier')}
+          // onEarlier={() => console.log('EarlierEarlier')}
           onImage={imageHandle}
         />
       </div>

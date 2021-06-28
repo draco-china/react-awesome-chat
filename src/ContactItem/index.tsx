@@ -5,14 +5,14 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 23:09:41
- * @LastEditTime: 2021-06-29 00:01:15
+ * @LastEditTime: 2021-06-29 04:10:11
  */
 import React from 'react';
-import { Contact } from '../typings';
+import { DateFormat } from '@/utils';
 import classNames from 'classnames';
+import { Contact } from '../typings';
 
 import './index.less';
-import moment from 'moment';
 
 export type ContactItemProps = {
   selected: boolean;
@@ -41,7 +41,7 @@ const ContactItem: React.FC<ContactItemProps> = ({
       </span>
     </div>
     <span className="chat-contact-item-date_area">
-      {moment(contact.date).format('YYYY/MM/DD HH:mm:ss')}
+      {DateFormat(contact.date)}
     </span>
   </div>
 );

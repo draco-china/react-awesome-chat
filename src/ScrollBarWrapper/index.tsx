@@ -5,8 +5,9 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:57:55
- * @LastEditTime: 2021-06-29 00:20:01
+ * @LastEditTime: 2021-06-29 04:31:10
  */
+import classNames from 'classnames';
 import React from 'react';
 import { Contact } from '../typings';
 
@@ -15,6 +16,7 @@ import './index.less';
 type WrapperProps = {
   data?: any[];
   onSelect?: (contact: Contact) => void;
+  borderd?: boolean;
   bottom?: boolean;
   height?: number;
   style?: React.CSSProperties;
@@ -82,7 +84,13 @@ export default function ScrollBarWrapper(
       const { scrollTop, thumbHeight, isBarHide, clientHeight } = this.state;
       return (
         <div
-          className={`chat-scroll-bar-wrapper-content ${this.props.className}`}
+          className={classNames(
+            'chat-scroll-bar-wrapper-content',
+            this.props.className,
+            {
+              borderd: this.props.borderd,
+            },
+          )}
         >
           <Wrapped
             {...this.props}
@@ -94,8 +102,9 @@ export default function ScrollBarWrapper(
             onScroll={this.scrollHandle}
           />
           <div
-            className="chat-scroll-bar-wrapper-scroll_bar_track"
-            style={{ display: isBarHide ? 'none' : 'block' }}
+            className={classNames('chat-scroll-bar-wrapper-scroll_bar_track', {
+              hidden: isBarHide,
+            })}
           >
             <span
               className="chat-scroll-bar-wrapper-scroll_bar_thumb"

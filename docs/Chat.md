@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-26 00:57:45
- * @LastEditTime: 2021-06-29 00:05:27
+ * @LastEditTime: 2021-06-29 04:22:35
 -->
 
 ## Chat
@@ -23,7 +23,7 @@ export default () => {
       me={my}
       chatList={msgList}
       onSend={(msg) => setMsgList([...msgList, msg])}
-      // onEarlier={() => console.log('EarlierEarlier')}
+      onEarlier={() => console.log('EarlierEarlier')}
       style={{
         borderRadius: 5,
       }}

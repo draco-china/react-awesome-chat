@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:57:32
- * @LastEditTime: 2021-06-29 00:02:44
+ * @LastEditTime: 2021-06-29 04:19:59
  */
 import React from 'react';
 import MsgItem from '../MsgItem';
@@ -22,6 +22,7 @@ type ChatRecordListProps = {
   scrollTop: number;
   thumbHeight: number;
   clientHeight: number;
+  borderd: boolean;
   onScroll?: () => void;
   onEarlier?: () => void;
 };

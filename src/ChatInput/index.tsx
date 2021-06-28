@@ -5,19 +5,18 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:56:56
- * @LastEditTime: 2021-06-26 00:30:41
+ * @LastEditTime: 2021-06-28 23:51:30
  */
 import React, { Component } from 'react';
-import style from './index.less';
-import md5 from 'md5';
-import dayjs from 'dayjs';
+import { v4 as uuidv4 } from 'uuid';
 import ChatToolBar from '../ChatToolsBar';
-import { Contact, ContactMessage } from '@/typings';
+import { Contact, ContactMessage } from '../typings';
+
+import './index.less';
 
 type ChatInputProps = {
   onSend: (msgData: ContactMessage) => void;
   me: Contact;
-  height: number;
   tools?: React.ReactNode[];
 };
 
@@ -38,10 +37,6 @@ export default class ChatInput extends Component<
   };
   textArea = React.createRef();
 
-  componentDidMount() {
-    // console.log(md5('123'));
-  }
-
   textChangeHandle = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const isAllowSend = !!e.target.value.trim();
     const text = e.target.value;
@@ -53,9 +48,9 @@ export default class ChatInput extends Component<
       return;
     }
     const randomNum = Math.floor(Math.random() * 1000);
-    const date = dayjs().unix();
+    const date = Date.now();
     const msgData: ContactMessage = {
-      _id: md5(`${this.state.text}${date}${randomNum}`),
+      _id: uuidv4(),
       date: date,
       user: this.props.me,
       message: {
@@ -86,19 +81,19 @@ export default class ChatInput extends Component<
 
   render() {
     return (
-      <div className={style.content} style={{ height: this.props.height }}>
+      <div className="chat-input-content">
         <ChatToolBar tools={this.props.tools} />
         <textarea
-          className={style.input_area}
+          className="chat-input-input_area"
           onKeyUp={this.keyUpHandle}
           onKeyDown={this.keyDownHandle}
           onChange={this.textChangeHandle}
           value={this.state.text}
           placeholder="请输入..."
         />
-        <div className={style.but_area}>
+        <div className="chat-input-but_area">
           <button
-            className={style.but}
+            className="chat-input-but"
             onClick={this.sendHandle}
             disabled={!this.state.isAllowSend}
           >

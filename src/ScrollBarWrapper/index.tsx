@@ -5,19 +5,20 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:57:55
- * @LastEditTime: 2021-06-26 03:26:19
+ * @LastEditTime: 2021-06-28 23:25:39
  */
 import React from 'react';
-import { ContactMessage, Contact } from '@/typings';
+import { Contact } from '../typings';
 
-import style from './index.less';
+import './index.less';
 
 type WrapperProps = {
-  data?: ContactMessage[] | Contact[];
+  data?: any[];
   onSelect?: (contact: Contact) => void;
-  bottom: boolean;
-  height: number;
+  bottom?: boolean;
+  height?: number;
   style?: React.CSSProperties;
+  className?: string;
 };
 type ScrollBarWrapperProps = any & React.RefAttributes<HTMLDivElement>;
 
@@ -25,7 +26,15 @@ export default function ScrollBarWrapper(
   Wrapped: React.ForwardRefExoticComponent<ScrollBarWrapperProps>,
 ) {
   return class extends React.Component<WrapperProps> {
-    state = {
+    state: {
+      resizeObserver?: ResizeObserver;
+      clientHeight: number;
+      thumbHeight: number;
+      scrollTop: number;
+      isBarHide: boolean;
+      c_s: number;
+    } = {
+      resizeObserver: undefined,
       clientHeight: 0,
       thumbHeight: 0,
       scrollTop: 0,
@@ -34,13 +43,19 @@ export default function ScrollBarWrapper(
     };
     scrollRef = React.createRef<any>();
     componentDidMount() {
-      this.computeHeight();
+      const resizeObserver = new ResizeObserver((entries) => {
+        setTimeout(() => {
+          this.computeHeight();
+        }, 0);
+      });
+      this.setState({ resizeObserver }, () => {
+        this.state.resizeObserver?.observe(this.scrollRef.current);
+      });
     }
-    componentDidUpdate(prevProps: { data?: unknown[] }) {
-      if (prevProps.data?.length !== this.props.data?.length) {
-        this.computeHeight();
-      }
+    componentWillUnmount() {
+      this.state.resizeObserver?.unobserve(this.scrollRef.current);
     }
+
     computeHeight = () => {
       const clientHeight = this.scrollRef.current.clientHeight;
       const scrollHeight = this.scrollRef.current.scrollHeight;
@@ -68,7 +83,9 @@ export default function ScrollBarWrapper(
     render() {
       const { scrollTop, thumbHeight, isBarHide, clientHeight } = this.state;
       return (
-        <div className={style.content} style={this.props.style}>
+        <div
+          className={`chat-scroll-bar-wrapper-content ${this.props.className}`}
+        >
           <Wrapped
             {...this.props}
             ref={this.scrollRef}
@@ -79,11 +96,11 @@ export default function ScrollBarWrapper(
             onScroll={this.scrollHandle}
           />
           <div
-            className={style.scroll_bar_track}
+            className="chat-scroll-bar-wrapper-scroll_bar_track"
             style={{ display: isBarHide ? 'none' : 'block' }}
           >
             <span
-              className={style.scroll_bar_thumb}
+              className="chat-scroll-bar-wrapper-scroll_bar_thumb"
               style={{
                 height: thumbHeight,
                 top: scrollTop,

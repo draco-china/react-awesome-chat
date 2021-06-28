@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-26 01:14:29
- * @LastEditTime: 2021-06-26 01:19:05
+ * @LastEditTime: 2021-06-28 23:39:54
 -->
 
 ## ContactList
@@ -19,6 +19,7 @@ export default () => {
   return (
     <ContactList
       data={contactList}
+      selected={contact.id}
       onSelect={(contact) => console.log(contact)}
     />
   );
@@ -27,10 +28,11 @@ export default () => {
 
 ## API
 
-| 参数     | 说明         | 类型            | 默认值 | 版本 |
-| -------- | ------------ | --------------- | ------ | ---- |
-| data     | 用户列表     | Contact[]       | -      |      |
-| onSelect | 点击用户事件 | (contact) => {} | -      |      |
+| 参数     | 说明                         | 类型              | 默认值 | 版本 |
+| -------- | ---------------------------- | ----------------- | ------ | ---- |
+| data     | 用户列表                     | Contact[]         | -      |      |
+| selectId | 选中用户 id 传入后为受控模式 | string            | -      |      |
+| onSelect | 点击用户事件                 | (contact) => void | -      |      |
 
 ## Contact
 

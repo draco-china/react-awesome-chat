@@ -5,28 +5,23 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:53:12
- * @LastEditTime: 2021-06-26 03:59:41
+ * @LastEditTime: 2021-06-29 00:06:44
  */
-import { Contact, ContactMessage } from '@/typings';
+import { Contact, ContactMessage } from '../typings';
 import React from 'react';
 import ChatHeader from '../ChatHeader';
 import ChatInput from '../ChatInput';
 import ChatRecordList from '../ChatRecordList';
 
-import style from './index.less';
-
-const textHeight = 150;
+import './index.less';
 
 type ChatProps = {
-  onSend?: (msgData: ContactMessage) => any;
   me: Contact;
   contact: Contact;
   chatList?: ContactMessage[];
   tools?: React.ReactNode[];
-  style: {
-    height: number;
-    width: number | string;
-  };
+  onSend?: (msgData: ContactMessage) => any;
+  onEarlier?: () => void;
 };
 
 const Chat: React.FC<ChatProps> = (props) => {
@@ -37,29 +32,19 @@ const Chat: React.FC<ChatProps> = (props) => {
     chatRecordList?.current?.computeHeight();
   };
 
-  const listHeight = props.style.height - textHeight - 60;
-
   return (
-    <div className={style.content} style={props.style}>
+    <div className="chat-content">
       <ChatHeader data={props.contact} />
       <ChatRecordList
         {...props}
         ref={chatRecordList}
         data={props.chatList}
-        height={listHeight}
-        style={{ height: listHeight }}
+        className="chat-content-list"
         bottom
       />
-      <ChatInput {...props} height={textHeight} onSend={sendHandle} />
+      <ChatInput {...props} onSend={sendHandle} />
     </div>
   );
-};
-
-Chat.defaultProps = {
-  style: {
-    height: 500,
-    width: 600,
-  },
 };
 
 export default Chat;

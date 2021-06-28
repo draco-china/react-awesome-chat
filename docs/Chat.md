@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-26 00:57:45
- * @LastEditTime: 2021-06-26 01:18:39
+ * @LastEditTime: 2021-06-29 00:05:27
 -->
 
 ## Chat
@@ -23,10 +23,8 @@ export default () => {
       me={my}
       chatList={msgList}
       onSend={(msg) => setMsgList([...msgList, msg])}
-      onEarlier={() => console.log('EarlierEarlier')}
+      // onEarlier={() => console.log('EarlierEarlier')}
       style={{
-        width: 600,
-        height: 500,
         borderRadius: 5,
       }}
     />
@@ -36,12 +34,14 @@ export default () => {
 
 ## API
 
-| 参数     | 说明         | 类型             | 默认值                       | 版本 |
-| -------- | ------------ | ---------------- | ---------------------------- | ---- |
-| me       | 当前用户信息 | Contact          | -                            |      |
-| contact  | 联系用户信息 | Contact          | -                            |      |
-| chatList | 消息列表     | ContactMessage[] | -                            |      |
-| style    | 容器样式     | CSSProperties    | `{ width: 600, height: 500}` |      |
+| 参数      | 说明                                     | 类型                            | 默认值 | 版本 |
+| --------- | ---------------------------------------- | ------------------------------- | ------ | ---- |
+| me        | 当前用户信息                             | Contact                         | -      |      |
+| contact   | 联系用户信息                             | Contact                         | -      |      |
+| chatList  | 消息列表                                 | ContactMessage[]                | -      |      |
+| tools     | 工具栏                                   | ReactNode[]                     | -      |      |
+| onSend    | 发送事件                                 | (msg: ContactMessage[]) => void | -      |      |
+| onEarlier | 加载更多点击事件, 传入后显示加载更多按钮 | () => void                      | -      |      |
 
 ## Contact
 

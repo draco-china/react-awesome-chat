@@ -5,13 +5,13 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 23:03:52
- * @LastEditTime: 2021-06-26 03:59:29
+ * @LastEditTime: 2021-06-26 05:13:44
  */
 import React from 'react';
-import { Message } from '@/typings';
+import { Message } from '../typings';
 import classNames from 'classnames';
 
-import style from './index.less';
+import './index.less';
 
 type MsgBubbleProps = {
   data: Message;
@@ -24,7 +24,9 @@ const MsgBubble: React.FC<MsgBubbleProps> = ({ data, isMe }) => {
       case 'text':
         return message.content;
       case 'image':
-        return <img className={style.img_content} src={message.content} />;
+        return (
+          <img className="chat-msg-bubble-img_content" src={message.content} />
+        );
       default:
         break;
     }
@@ -32,9 +34,9 @@ const MsgBubble: React.FC<MsgBubbleProps> = ({ data, isMe }) => {
   return (
     <div
       className={classNames(
-        style.text_content,
-        style.arrow,
-        isMe ? style.arrow_right : style.arrow_left,
+        'chat-msg-bubble-text_content',
+        'chat-msg-bubble-arrow',
+        isMe ? 'chat-msg-bubble-arrow_right' : 'chat-msg-bubble-arrow_left',
       )}
     >
       {renderContent(data)}

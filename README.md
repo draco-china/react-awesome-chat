@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-26 01:46:35
- * @LastEditTime: 2021-06-26 03:09:03
+ * @LastEditTime: 2021-06-26 04:14:19
 -->
 
 # react-awesome-chat
@@ -14,13 +14,6 @@
 
 ```bash
 $ npm i react-awesome-chat
-```
-
-## 引入
-
-```js
-import { Chat, ContactList } from 'react-awesome-chat/dist/index';
-import 'react-awesome-chat/dist/index.css';
 ```
 
 ## 介绍

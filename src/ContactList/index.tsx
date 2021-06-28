@@ -5,18 +5,20 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:57:47
- * @LastEditTime: 2021-06-26 01:32:42
+ * @LastEditTime: 2021-06-28 23:38:14
  */
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import ContactItem from '../ContactItem';
 import ScrollBarWrapper from '../ScrollBarWrapper';
-import { Contact } from '@/typings';
+import { Contact } from '../typings';
 
-import style from './index.less';
+import './index.less';
 
 type ContactListProps = {
   data: Contact[];
-  onSelect: (contact: Contact) => void;
+  selectId?: string;
+  onSelect?: (contact: Contact) => void;
   onScroll?: (e: React.UIEvent<HTMLDivElement, UIEvent>) => void;
 };
 
@@ -29,13 +31,20 @@ const ContactList = React.forwardRef<HTMLDivElement, ContactListProps>(
       props.onSelect && props.onSelect(con);
     };
 
+    useEffect(() => {
+      setSelectId(props.selectId);
+    }, [props.selectId]);
+
     return (
-      <div className={style.list_area} ref={ref} onScroll={props.onScroll}>
+      <div
+        className="chat-contact-list-list_area"
+        ref={ref}
+        onScroll={props.onScroll}
+      >
         {props.data?.map((contact, index) => (
           <ContactItem
             contact={contact}
             key={contact.id}
-            border={index + 1 !== props.data?.length}
             selected={selectId === contact.id}
             onClick={selectContactHandle.bind(this, contact)}
           />

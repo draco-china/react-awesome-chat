@@ -5,9 +5,8 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 20:18:47
- * @LastEditTime: 2021-06-26 03:22:09
+ * @LastEditTime: 2021-06-28 23:06:30
  */
-declare module '*.less';
 export interface Contact {
   id: string;
   avatar: string;
@@ -16,7 +15,7 @@ export interface Contact {
   // 最近一条信息
   message?: string;
   // 信息更新时间
-  date?: Date;
+  date?: Date | string | number;
 }
 
 export interface Message {
@@ -28,5 +27,5 @@ export interface ContactMessage {
   _id: string;
   user: Contact;
   message: Message;
-  date: number;
+  date: Date | string | number;
 }

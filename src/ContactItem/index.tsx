@@ -5,10 +5,10 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 23:09:41
- * @LastEditTime: 2021-06-29 04:10:11
+ * @LastEditTime: 2021-06-29 04:54:05
  */
 import React from 'react';
-import { DateFormat } from '@/utils';
+import { DateFormat } from '../utils';
 import classNames from 'classnames';
 import { Contact } from '../typings';
 

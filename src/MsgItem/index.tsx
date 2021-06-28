@@ -9,7 +9,7 @@
  */
 import React from 'react';
 import classNames from 'classnames';
-import { DateFormat } from '@/utils';
+import { DateFormat } from '../utils';
 import MsgBubble from '../MsgBubble';
 import { Contact, ContactMessage } from '../typings';
 

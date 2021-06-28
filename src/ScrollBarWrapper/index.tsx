@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:57:55
- * @LastEditTime: 2021-06-28 23:25:39
+ * @LastEditTime: 2021-06-29 00:20:01
  */
 import React from 'react';
 import { Contact } from '../typings';
@@ -44,9 +44,7 @@ export default function ScrollBarWrapper(
     scrollRef = React.createRef<any>();
     componentDidMount() {
       const resizeObserver = new ResizeObserver((entries) => {
-        setTimeout(() => {
-          this.computeHeight();
-        }, 0);
+        this.computeHeight();
       });
       this.setState({ resizeObserver }, () => {
         this.state.resizeObserver?.observe(this.scrollRef.current);

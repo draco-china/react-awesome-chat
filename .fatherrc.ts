@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-26 02:51:28
- * @LastEditTime: 2021-06-26 04:54:26
+ * @LastEditTime: 2021-06-29 01:24:39
  */
 
 export default {
@@ -18,15 +18,6 @@ export default {
       react: 'React',
     },
   },
-  extraBabelPlugins: [
-    [
-      'babel-plugin-import',
-      {
-        libraryName: 'antd',
-        style: false,
-      },
-    ],
-  ],
   cssModules: {
     generateScopedName: '[name]_[local]_[hash:base64:5]',
   },

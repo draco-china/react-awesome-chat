@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:43:03
- * @LastEditTime: 2021-06-29 04:48:29
+ * @LastEditTime: 2021-06-29 05:02:48
 -->
 
 ## 介绍
@@ -23,6 +23,7 @@ react-awesome-chat 是一个简单的 web 聊天组件。
   - [x] 加入滚动容器 `border` 设置 区分联系人列表和聊天记录列表样式
   - [x] 滚动条悬浮，不占用容器宽度
 - [x] 联系人列表加入受控状态
+- [x] 优化时间显示 具体请看 utils
 - [ ] 完整的升级到 `HOOKS`
 - 欢迎任何形式的贡献，有任何建议或意见，请 [提问](https://github.com/Draco-china/react-awesome-chat/issues)。
 

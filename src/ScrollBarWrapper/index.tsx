@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:57:55
- * @LastEditTime: 2021-06-29 04:31:10
+ * @LastEditTime: 2021-07-01 22:46:04
  */
 import classNames from 'classnames';
 import React from 'react';
@@ -15,6 +15,7 @@ import './index.less';
 
 type WrapperProps = {
   data?: any[];
+  selectId?: string;
   onSelect?: (contact: Contact) => void;
   borderd?: boolean;
   bottom?: boolean;

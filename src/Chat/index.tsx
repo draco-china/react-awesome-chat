@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:53:12
- * @LastEditTime: 2021-06-29 04:21:33
+ * @LastEditTime: 2021-07-01 22:22:41
  */
 import { Contact, ContactMessage } from '../typings';
 import React from 'react';
@@ -16,9 +16,9 @@ import ChatRecordList from '../ChatRecordList';
 import './index.less';
 
 type ChatProps = {
-  me: Contact;
-  contact: Contact;
-  chatList?: ContactMessage[];
+  from: Contact;
+  to: Contact;
+  data?: ContactMessage[];
   tools?: React.ReactNode[];
   onSend?: (msgData: ContactMessage) => any;
   onEarlier?: () => void;
@@ -34,11 +34,11 @@ const Chat: React.FC<ChatProps> = (props) => {
 
   return (
     <div className="chat-content">
-      <ChatHeader data={props.contact} />
+      <ChatHeader data={props.to} />
       <ChatRecordList
         {...props}
         ref={chatRecordList}
-        data={props.chatList}
+        data={props.data}
         className="chat-content-list"
         bottom
         borderd

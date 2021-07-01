@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 22:25:03
- * @LastEditTime: 2021-06-29 04:28:53
+ * @LastEditTime: 2021-07-01 22:27:02
  */
 import React from 'react';
 import classNames from 'classnames';
@@ -18,11 +18,11 @@ import './index.less';
 
 type MsgItemProps = {
   data: ContactMessage;
-  me: Contact;
+  from: Contact;
 };
 
-export default function MsgItem({ data, me }: MsgItemProps) {
-  const isMe = data.user.id === me.id;
+export default function MsgItem({ data, from }: MsgItemProps) {
+  const isMe = data.from.id === from.id;
 
   return (
     <div
@@ -31,7 +31,7 @@ export default function MsgItem({ data, me }: MsgItemProps) {
       })}
     >
       <div className="chat-msg-item-avatar">
-        <img src={data.user.avatar} />
+        <img src={data.from.avatar} />
       </div>
       <div
         className={classNames('chat-msg-item-text_area', {
@@ -40,7 +40,7 @@ export default function MsgItem({ data, me }: MsgItemProps) {
       >
         <div className="chat-msg-item-comment_area">
           <span className="chat-msg-item-nickname_text">
-            {data.user.nickname}
+            {data.from.nickname}
           </span>
           <span className="chat-msg-item-date_text">
             {DateFormat(data.date, true)}

@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 20:18:47
- * @LastEditTime: 2021-06-28 23:06:30
+ * @LastEditTime: 2021-07-01 22:24:01
  */
 export interface Contact {
   id: string;
@@ -25,7 +25,8 @@ export interface Message {
 
 export interface ContactMessage {
   _id: string;
-  user: Contact;
+  from: Contact;
+  to: Contact;
   message: Message;
   date: Date | string | number;
 }

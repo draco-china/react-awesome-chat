@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-26 00:57:45
- * @LastEditTime: 2021-06-29 04:22:35
+ * @LastEditTime: 2021-07-01 22:29:57
 -->
 
 ## Chat
@@ -19,9 +19,9 @@ export default () => {
   const [msgList, setMsgList] = useState(messageList);
   return (
     <Chat
-      contact={contact}
-      me={my}
-      chatList={msgList}
+      to={contact}
+      from={my}
+      data={msgList}
       onSend={(msg) => setMsgList([...msgList, msg])}
       onEarlier={() => console.log('EarlierEarlier')}
       style={{
@@ -36,9 +36,9 @@ export default () => {
 
 | 参数      | 说明                                     | 类型                            | 默认值 | 版本 |
 | --------- | ---------------------------------------- | ------------------------------- | ------ | ---- |
-| me        | 当前用户信息                             | Contact                         | -      |      |
-| contact   | 联系用户信息                             | Contact                         | -      |      |
-| chatList  | 消息列表                                 | ContactMessage[]                | -      |      |
+| from      | 当前用户信息                             | Contact                         | -      |      |
+| to        | 联系用户信息                             | Contact                         | -      |      |
+| data      | 消息列表                                 | ContactMessage[]                | -      |      |
 | tools     | 工具栏                                   | ReactNode[]                     | -      |      |
 | onSend    | 发送事件                                 | (msg: ContactMessage[]) => void | -      |      |
 | onEarlier | 加载更多点击事件, 传入后显示加载更多按钮 | () => void                      | -      |      |
@@ -59,7 +59,8 @@ export default () => {
 | 参数    | 说明         | 类型    | 默认值 | 版本 |
 | ------- | ------------ | ------- | ------ | ---- |
 | \_id    | 消息唯一标识 | string  | -      |      |
-| user    | 用户信息     | Contact | -      |      |
+| from    | 当前用户信息 | Contact | -      |      |
+| to      | 联系用户信息 | Contact | -      |      |
 | message | 用户消息     | Message | -      |      |
 | date    | 发送信息时间 | Date    | -      |      |
 

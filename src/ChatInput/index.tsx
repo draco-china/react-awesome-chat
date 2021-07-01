@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:56:56
- * @LastEditTime: 2021-06-28 23:51:30
+ * @LastEditTime: 2021-07-01 22:25:20
  */
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
@@ -16,7 +16,8 @@ import './index.less';
 
 type ChatInputProps = {
   onSend: (msgData: ContactMessage) => void;
-  me: Contact;
+  from: Contact;
+  to: Contact;
   tools?: React.ReactNode[];
 };
 
@@ -47,12 +48,12 @@ export default class ChatInput extends Component<
     if (!this.state.isAllowSend) {
       return;
     }
-    const randomNum = Math.floor(Math.random() * 1000);
     const date = Date.now();
     const msgData: ContactMessage = {
       _id: uuidv4(),
       date: date,
-      user: this.props.me,
+      from: this.props.from,
+      to: this.props.to,
       message: {
         type: 'text',
         content: this.state.text,

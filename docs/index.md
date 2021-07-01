@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:43:03
- * @LastEditTime: 2021-06-29 05:02:48
+ * @LastEditTime: 2021-07-01 22:27:56
 -->
 
 ## 介绍
@@ -75,9 +75,9 @@ const App = () => {
         }}
       >
         <Chat
-          contact={contact}
-          me={my}
-          chatList={msgList}
+          to={contact}
+          from={my}
+          data={msgList}
           onSend={(msg) => setMsgList([...msgList, msg])}
           // onEarlier={() => console.log('EarlierEarlier')}
           onImage={imageHandle}

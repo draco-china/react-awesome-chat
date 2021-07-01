@@ -125,7 +125,7 @@ export const messageList = [
   {
     _id: 'ecbb310507ce9c7d3bd57eca046a80f3',
     date: 1610016423,
-    user: {
+    from: {
       id: 1234,
       avatar: '//game.gtimg.cn/images/lol/act/a20201103lmpwjl/icon-ht.png',
       nickname: 'sirosong',
@@ -136,7 +136,7 @@ export const messageList = [
   {
     _id: 'f3386f6dcf4e69a8bd51a0d688d05580',
     date: 1610016470,
-    user: {
+    from: {
       id: 9527,
       avatar: '//game.gtimg.cn/images/lol/act/img/champion/Khazix.png',
       nickname: '卡兹克',
@@ -147,7 +147,7 @@ export const messageList = [
   {
     _id: 'f3386f6dcf4e69a8bd51a0d688d0e980',
     date: 1610016470,
-    user: {
+    from: {
       id: 1234,
       avatar: '//game.gtimg.cn/images/lol/act/a20201103lmpwjl/icon-ht.png',
       nickname: 'sirosong',
@@ -158,7 +158,7 @@ export const messageList = [
   {
     _id: '75b5bde8f3b9ef7aa9b704492cb28bb',
     date: 1610016580,
-    user: {
+    from: {
       id: 1234,
       avatar: '//game.gtimg.cn/images/lol/act/a20201103lmpwjl/icon-ht.png',
       nickname: 'sirosong',
@@ -169,7 +169,7 @@ export const messageList = [
   {
     _id: '75b5bde8f3b9ef7aa9b704492cb28baf',
     date: 1610016880,
-    user: {
+    from: {
       id: 1234,
       avatar: '//game.gtimg.cn/images/lol/act/a20201103lmpwjl/icon-ht.png',
       nickname: 'sirosong',
@@ -184,7 +184,7 @@ export const messageList = [
   {
     _id: '75b5bde8f3b9ef7aa904492cb28baf',
     date: 1610016880,
-    user: {
+    from: {
       id: 9527,
       avatar: '//game.gtimg.cn/images/lol/act/img/champion/Khazix.png',
       nickname: '卡兹克',

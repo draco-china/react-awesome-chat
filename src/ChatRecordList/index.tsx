@@ -5,7 +5,7 @@
  * @Email: Draco.coder@gmail.com
  * @Github: https://github.com/draco-china
  * @Date: 2021-06-25 21:57:32
- * @LastEditTime: 2021-06-29 04:19:59
+ * @LastEditTime: 2021-07-01 22:27:12
  */
 import React from 'react';
 import MsgItem from '../MsgItem';
@@ -17,7 +17,7 @@ import './index.less';
 
 type ChatRecordListProps = {
   data?: ContactMessage[];
-  me: Contact;
+  from: Contact;
   isBarHide: boolean;
   scrollTop: number;
   thumbHeight: number;
@@ -61,7 +61,7 @@ const ChatRecordList = React.forwardRef<HTMLDivElement, ChatRecordListProps>(
           </div>
         )}
         {props.data?.map((bubble) => (
-          <MsgItem me={props.me} data={bubble} key={bubble._id} />
+          <MsgItem from={props.from} data={bubble} key={bubble._id} />
         ))}
       </div>
     );
